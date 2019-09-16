@@ -6,8 +6,8 @@ header.masthead {
   // if the image name change, make sure to update the url path below!
   background: linear-gradient(
       to bottom,
-      #{fade-out(grey, 0.7)} 0%,
-      #{fade-out(grey, 0.7)} 100%
+      #{fade-out(grey, 0.6)} 0%,
+      #{fade-out(grey, 0.4)} 100%
     ),
     url("../images/fancyyard.jpg");
   background-position: center;

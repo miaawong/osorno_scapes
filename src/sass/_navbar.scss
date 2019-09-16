@@ -34,8 +34,8 @@
     box-shadow: none;
     background-color: transparent;
     .navbar-brand {
-      color: white
-	  //fade-out($white, 0.3);
+      color: fade-out($white, 0.1);
+      font-size: 30px;
 
       &:hover {
         color: $white;

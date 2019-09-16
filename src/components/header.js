@@ -20,7 +20,7 @@ export default class Header extends React.Component {
         >
           <div className="container">
             <a
-              className="navbar-brand js-scroll-trigger"
+              className="navbar-brand js-scroll-trigger navTitle"
               href="#page-top"
               onClick={Scroller.handleAnchorScroll}
             >
@@ -82,13 +82,14 @@ export default class Header extends React.Component {
             <div className="row h-100 align-items-center justify-content-center text-center">
               <div className="col-lg-10 align-self-end">
                 <h1 className="text-uppercase text-white font-weight-bold">
-                  Osorno Landscapes
+                  Professional Landscaping Company
                 </h1>
                 <hr className="divider my-4" />
               </div>
               <div className="col-lg-8 align-self-baseline">
-                <p className="text-white-75 font-weight-light mb-5">
-                  Landscaping services
+                <p className="text-white font-weight-bold mb-5">
+                  Landscape design, lawn care and maintenance to commercial and
+                  residential clients
                 </p>
                 <a
                   className="btn btn-primary btn-xl js-scroll-trigger"
