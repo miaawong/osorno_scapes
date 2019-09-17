@@ -266,10 +266,7 @@ export default class IndexPage extends Component {
 
 export const imageData = graphql`
   query {
-    images: allFile(
-      # filter: { relativePath: { glob: "portfolio/fullsize/*.jpg" } }
-      # sort: { fields: name }
-    ) {
+    images: allFile {
       edges {
         node {
           childImageSharp {
