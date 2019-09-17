@@ -206,11 +206,12 @@ export default class IndexPage extends Component {
                   href="img/portfolio/fullsize/6.jpg"
                   onClick={this.handlePortfolioClick.bind(this, 5)}
                 >
-                  <Img
+                  {/* <Img
                     fluid={
-                      this.props.data.images.edges[5].node.childImageSharp.fluid
+                      // this.props.data.images.edges[5].node.childImageSharp.fluid
+                      // this.props.data.contentImg.edges[0].node.pictures.fluid
                     }
-                  />
+                  /> */}
                   <div className="portfolio-box-caption p-3">
                     <div className="project-category text-white-50">
                       Category
@@ -250,6 +251,15 @@ export default class IndexPage extends Component {
             </div>
           </div>
         </section>
+        <section>
+          <div>
+            <h2>hello</h2>
+            <Img
+              fluid={this.props.data.contentImg.edges[0].node.pictures[0].fluid}
+            />
+            <h1>{this.props.data.contentImg.edges[0].node.title}</h1>
+          </div>
+        </section>
         <PortfolioModal
           show={this.state.modalShow}
           onHide={() => this.setModal(false, 0)}
@@ -264,7 +274,7 @@ export default class IndexPage extends Component {
   }
 }
 
-export const imageData = graphql`
+export const localImg = graphql`
   query {
     images: allFile {
       edges {
@@ -272,6 +282,19 @@ export const imageData = graphql`
           childImageSharp {
             fluid {
               ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+
+    contentImg: allContentfulOsorno {
+      edges {
+        node {
+          title
+          pictures {
+            fluid {
+              ...GatsbyContentfulFluid_tracedSVG
             }
           }
         }
