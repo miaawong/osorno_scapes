@@ -1,7 +1,8 @@
 import React, { Component } from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
-
+import About from "../components/about"
+import Reviews from "../components/reviews"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Scroller from "../components/scroller"
@@ -36,31 +37,7 @@ export default class IndexPage extends Component {
     return (
       <Layout>
         <SEO title="Home" />
-        <section className="page-section bg-primary" id="about">
-          <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-lg-12 text-center">
-                <h2 className="text-white mt-0">About Us</h2>
-                <hr className="divider light my-4" />
-                <p className="text-white mb-4 aboutUs">
-                  Orsorno Scapes provides residential and commercial landscaping
-                  services for clients in YOUR CITY and the communities north of
-                  YOUR STATE. Founded by President, OWNER NAME, Orsorno Scapes
-                  was built on trust and value with our clients. We want you to
-                  be satisfied and we are committed to your landscaping and
-                  property maintenance needs.
-                </p>
-                <a
-                  className="btn btn-light btn-xl js-scroll-trigger"
-                  href="#services"
-                  onClick={Scroller.handleAnchorScroll}
-                >
-                  Get Started!
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+        <About />
 
         <section className="page-section" id="services">
           <div className="container">
@@ -271,12 +248,11 @@ export default class IndexPage extends Component {
                   href="img/portfolio/fullsize/6.jpg"
                   onClick={this.handlePortfolioClick.bind(this, 5)}
                 >
-                  {/* <Img
+                  <Img
                     fluid={
-                      // this.props.data.images.edges[5].node.childImageSharp.fluid
-                      // this.props.data.contentImg.edges[0].node.pictures.fluid
+                      this.props.data.images.edges[5].node.childImageSharp.fluid
                     }
-                  /> */}
+                  />
                   <div className="portfolio-box-caption p-3">
                     <div className="project-category text-white-50">
                       Category
@@ -288,6 +264,9 @@ export default class IndexPage extends Component {
             </div>
           </div>
         </section>
+
+        {/* review section */}
+        <Reviews />
 
         <section className="page-section" id="contact">
           <div className="container">
@@ -316,6 +295,7 @@ export default class IndexPage extends Component {
             </div>
           </div>
         </section>
+        {/* testing contentful stuff */}
         <section>
           <div>
             <h2>hello</h2>
@@ -339,7 +319,7 @@ export default class IndexPage extends Component {
   }
 }
 
-export const localImg = graphql`
+export const getImg = graphql`
   query {
     images: allFile {
       edges {
@@ -353,7 +333,7 @@ export const localImg = graphql`
       }
     }
 
-    contentImg: allContentfulOsorno {
+    contentImg: allContentfulOsornoImg {
       edges {
         node {
           title

@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "osorno-scapes",
   "private": true,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>, Mia Wong, Jeff Au",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.10.1",
     "bootstrap": "^4.3.1",
@@ -26,7 +26,9 @@
     "react-bootstrap": "^1.0.0-beta.11",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "react-scrollspy": "^3.4.0"
+    "react-scrollspy": "^3.4.0",
+    "rich-text-to-react": "^1.0.1",
+    "styled-components": "^4.3.2"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
