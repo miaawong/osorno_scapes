@@ -1,7 +1,7 @@
 import React from "react"
 import Scrollspy from "react-scrollspy"
 import { Navbar, Nav } from "react-bootstrap"
-import Scroller from "./scroller"
+import Scroller from "../util/scroller"
 
 export default class Header extends React.Component {
   constructor(props) {

@@ -2,7 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
 import styled from "styled-components"
-import Review from "./Review"
+import Review from "../Review"
 
 const ReviewDiv = styled.section`
   width: 100%;

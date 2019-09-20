@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Scroller from "../components/scroller"
+import Scroller from "../util/scroller"
 
 export default class About extends Component {
   constructor(props) {
