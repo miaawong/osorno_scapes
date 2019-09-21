@@ -3,6 +3,8 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import About from "../components/Sections/About"
 import Reviews from "../components/Sections/Reviews"
+import Contact from "../components/Sections/Contact"
+import Services from "../components/Sections/Services"
 import Layout from "../components/layout"
 import SEO from "../components/util/seo"
 import Scroller from "../components/util/scroller"
@@ -38,47 +40,9 @@ export default class IndexPage extends Component {
       <Layout>
         <SEO title="Home" />
         <About />
+        <Services />
 
-        <section className="page-section" id="services">
-          <div className="container">
-            <h2 className="text-center mt-0">Our Services</h2>
-            <hr className="divider my-4" />
-            <div className="row">
-              <div className="col-lg-2 col-md-6 text-center">
-                <div className="mt-5">
-                  <h3 className="h4 mb-2">Lawn Care & Maintenance</h3>
-                  {/* <a className="btn btn-light btn-sm">More</a> */}
-                </div>
-              </div>
-              <div className="col-lg-2 col-md-6 text-center">
-                <div className="mt-5">
-                  <h3 className="h4 mb-2">Landscape Design</h3>
-                </div>
-              </div>
-              <div className="col-lg-2 col-md-6 text-center">
-                <div className="mt-5">
-                  <h3 className="h4 mb-2">Hardscapes</h3>
-                </div>
-              </div>
-              <div className="col-lg-2 col-md-6 text-center">
-                <div className="mt-5">
-                  <h3 className="h4 mb-2">Patios</h3>
-                </div>
-              </div>
-              <div className="col-lg-2 col-md-6 text-center">
-                <div className="mt-5">
-                  <h3 className="h4 mb-2">SERVICES</h3>
-                </div>
-              </div>
-              <div className="col-lg-2 col-md-6 text-center">
-                <div className="mt-5">
-                  <h3 className="h4 mb-2">SERVICES</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
+        {/* i am gonna need some guidance to separate dis */}
         <section id="portfolio">
           <div className="container-fluid p-0">
             <div className="row no-gutters">
@@ -268,43 +232,9 @@ export default class IndexPage extends Component {
         {/* review section */}
         <Reviews />
 
-        <section className="page-section" id="contact">
-          <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-lg-8 text-center">
-                <h2 className="mt-0">Let's Get In Touch!</h2>
-                <hr className="divider my-4" />
-                <p className=" mb-5">
-                  Ready to start your next project with us? Give us a call or
-                  send us an email and we will get back to you as soon as
-                  possible!
-                </p>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
-                <i className="fas fa-phone fa-3x mb-3 text-muted"></i>
-                <div>+1 555-555-5555</div>
-              </div>
-              <div className="col-lg-4 mr-auto text-center">
-                <i className="fas fa-envelope fa-3x mb-3 text-muted"></i>
-                <a className="d-block" href="mailto:contact@yourwebsite.com">
-                  contact@yourwebsite.com
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* testing contentful stuff */}
-        <section>
-          <div>
-            <h2>hello</h2>
-            <Img
-              fluid={this.props.data.contentImg.edges[0].node.pictures[0].fluid}
-            />
-            <h1>{this.props.data.contentImg.edges[0].node.title}</h1>
-          </div>
-        </section>
+        {/* contact section */}
+        <Contact />
+
         <PortfolioModal
           show={this.state.modalShow}
           onHide={() => this.setModal(false, 0)}
