@@ -52,7 +52,7 @@ export default class Images extends Component {
             <section id="portfolio">
               <div className="container-fluid p-0">
                 <div className="row no-gutters">
-                  {data.images.edges.map(edge => {
+                  {data.images.edges.map((edge, index) => {
                     const { title, id } = edge.node
                     const { fluid } = edge.node.pictures[0]
                     return (
@@ -60,7 +60,7 @@ export default class Images extends Component {
                         <a
                           className="portfolio-box"
                           href={fluid.src}
-                          onClick={this.handlePortfolioClick.bind(this, 0)}
+                          onClick={this.handlePortfolioClick.bind(this, index)}
                         >
                           <Img className="thumbnails" fluid={fluid} key={id} />
                           <div className="portfolio-box-caption">
