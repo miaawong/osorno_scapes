@@ -54,25 +54,30 @@ export default class Images extends Component {
             <section id="portfolio">
               <div className="container-fluid p-0">
                 <div className="row no-gutters">
-                  <div className="col-lg-4 col-sm-6">
-                    <a
-                      className="portfolio-box"
-                      href="img/portfolio/fullsize/1.jpg"
-                      onClick={this.handlePortfolioClick.bind(this, 0)}
-                    >
-                      {data.images.edges.map(img => {
-                        const { fluid } = img.node.pictures[0]
-
-                        return <Img className="thumbnails" fluid={fluid} />
-                      })}
-                      <div className="portfolio-box-caption">
-                        <div className="project-category text-white-50">
-                          {/* Category */}
-                        </div>
-                        <div className="project-name">{projectName}</div>
+                  {data.images.edges.map(img => {
+                    const { fluid } = img.node.pictures[0]
+                    return (
+                      <div className="col-lg-4 col-sm-6">
+                        <a
+                          className="portfolio-box"
+                          href="img/portfolio/fullsize/1.jpg"
+                          onClick={this.handlePortfolioClick.bind(this, 0)}
+                        >
+                          <Img
+                            className="thumbnails"
+                            fluid={fluid}
+                            key={img.node.id}
+                          />
+                          <div className="portfolio-box-caption">
+                            <div className="project-category text-white-50">
+                              {/* Category */}
+                            </div>
+                            <div className="project-name">{projectName}</div>
+                          </div>
+                        </a>
                       </div>
-                    </a>
-                  </div>
+                    )
+                  })}
                 </div>
               </div>
               <PortfolioModal
