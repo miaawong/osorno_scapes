@@ -1,9 +1,9 @@
 {
   "name": "osorno-scapes",
-  "private": true,
+  "private": false,
   "description": "A simple starter to get up and developing quickly with Gatsby",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>, Mia Wong, Jeff Au",
+  "author": "Kyle Mathews, Mia Wong, Jeff Au",
   "dependencies": {
     "@contentful/rich-text-types": "^13.4.0",
     "@fortawesome/fontawesome-free": "^5.10.1",
