@@ -2,6 +2,7 @@ import React from "react"
 import { MARKS } from "@contentful/rich-text-types"
 import RichTextToReact from "rich-text-to-react"
 import styled from "styled-components"
+import { FaStar } from "react-icons/fa"
 const ReviewComponent = styled.section`
   padding-bottom: 20px;
   .clientName {
@@ -11,14 +12,15 @@ const ReviewComponent = styled.section`
 `
 const Review = ({ review }) => {
   const { json } = review.review
+  const starTotal = 5
   return (
     <>
-      <ReviewComponent className="col-md-4 col-sm-6 col-xs-12 my-2">
+      <ReviewComponent className="col-md-4 col-sm-6 col-xs-12 my-2 ">
         <div className="clientNameStars">
-          <h6 className="px-4">
-            stars go here
-            <cite className="clientName">{review.clientName}</cite>
-          </h6>
+          <FaStar /> <FaStar /> <FaStar /> <FaStar /> <FaStar />
+          {/*   <h6 className="px-4 my-3">
+          </h6> */}
+          <cite className="clientName px-3 "> - {review.clientName}</cite>
         </div>
         {/* json for review */}
         <RichTextToReact document={json} options={RichTextOptions} />

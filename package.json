@@ -17,7 +17,7 @@
     "gatsby-plugin-sharp": "^2.2.9",
     "gatsby-plugin-styled-components": "^3.1.5",
     "gatsby-plugin-web-font-loader": "^1.0.4",
-    "gatsby-source-contentful": "^2.1.36",
+    "gatsby-source-contentful": "^2.1.44",
     "gatsby-source-filesystem": "^2.1.8",
     "gatsby-transformer-sharp": "^2.2.5",
     "node": "^12.10.0",
@@ -27,6 +27,7 @@
     "react-bootstrap": "^1.0.0-beta.11",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
+    "react-icons": "^3.7.0",
     "react-scrollspy": "^3.4.0",
     "rich-text-to-react": "^1.0.1",
     "styled-components": "^4.3.2"

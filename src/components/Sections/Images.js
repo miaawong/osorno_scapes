@@ -68,7 +68,7 @@ export default class Images extends Component {
                             <div className="project-category text-white-50">
                               {/* Category */}
                             </div>
-                            <div className="project-name">{projectName}</div>
+                            <div className="project-name">{title}</div>
                           </div>
                         </a>
                       </div>

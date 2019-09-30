@@ -6,7 +6,7 @@ import Review from "../Review"
 
 const ReviewDiv = styled.section`
   width: 100%;
-  padding: 20px 20px;
+  padding: 40px 100px;
   margin: 0 auto;
 `
 const getReviews = graphql`
@@ -28,13 +28,13 @@ const Reviews = () => {
     <StaticQuery
       query={getReviews}
       render={data => {
-        const { json: review } = data.clientReview.edges[0].node.review
+        //    const { json: review } = data.clientReview.edges[0].node.review
 
         // console.log(clientNames)
         return (
           <ReviewDiv>
             <h2 className="text-center mt-4">Reviews</h2>
-            <hr className="divider my-4" />
+            <hr className="divider my-4 " />
             <div className="row">
               {data.clientReview.edges.map(reviewObj => {
                 const { node: review } = reviewObj

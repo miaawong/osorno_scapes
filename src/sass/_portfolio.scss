@@ -13,7 +13,8 @@
       column-gap: 0px;
       .thumbnails {
         width: 100%;
-        object-fit: cover;
+        object-fit: cover !important;
+        position: static !important; // or else pictures might not fit
       }
       .portfolio-box-caption {
         display: flex;
