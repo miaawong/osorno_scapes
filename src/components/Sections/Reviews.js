@@ -17,6 +17,7 @@ const getReviews = graphql`
           clientName
           review {
             json
+            id
           }
         }
       }
@@ -38,7 +39,7 @@ const Reviews = () => {
             <div className="row">
               {data.clientReview.edges.map(reviewObj => {
                 const { node: review } = reviewObj
-                return <Review review={review} key={reviewObj.node.id} />
+                return <Review review={review} key={reviewObj.node.review.id} />
               })}
             </div>
           </ReviewDiv>

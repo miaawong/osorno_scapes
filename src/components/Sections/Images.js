@@ -57,7 +57,7 @@ export default class Images extends Component {
                     const { fluid } = edge.node.pictures[0]
 
                     return (
-                      <div className="col-lg-4 col-sm-6">
+                      <div className="col-lg-4 col-sm-6" key={index}>
                         <a
                           className="portfolio-box"
                           href={fluid.src}
