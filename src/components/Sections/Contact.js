@@ -65,12 +65,11 @@ const Contact = () => {
                   required
                 />
               </div>
-              <button
-                type="submit"
-                className="btn btn-primary btn-block text-capitalize mt-5"
-              >
-                submit
-              </button>
+              <div className="row justify-content-center text-center">
+                <button type="submit" className="btn btn-primary btn-xl">
+                  submit
+                </button>
+              </div>
             </form>
           </div>
         </div>
