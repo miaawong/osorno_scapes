@@ -10,6 +10,7 @@ export const getImg = graphql`
         node {
           title
           pictures {
+            id
             fluid {
               ...GatsbyContentfulFluid_tracedSVG
             }
@@ -53,17 +54,17 @@ export default class Images extends Component {
               <div className="container-fluid p-0">
                 <div className="row no-gutters">
                   {data.images.edges.map((edge, index) => {
-                    const { title, id } = edge.node
-                    const { fluid } = edge.node.pictures[0]
+                    const { title } = edge.node
 
+                    const { fluid, id } = edge.node.pictures[0]
                     return (
-                      <div className="col-lg-4 col-sm-6" key={index}>
+                      <div className="col-lg-4 col-sm-6" key={id}>
                         <a
                           className="portfolio-box"
                           href={fluid.src}
                           onClick={this.handlePortfolioClick.bind(this, index)}
                         >
-                          <Img className="thumbnails" fluid={fluid} key={id} />
+                          <Img className="thumbnails" fluid={fluid} />
                           <div className="portfolio-box-caption">
                             <div className="project-category text-white-50">
                               {/* Category */}
